@@ -9,9 +9,8 @@ export default class TodoList extends Component {
 
   addTodo = (task) => {
     if (task != "") {
-      this.state.todoList.push(task);
       this.setState({
-        todoList : this.state.todoList
+        todoList : this.state.todoList.concat(task)
       })
     }
   }
